@@ -17,7 +17,7 @@ class Request
     Format and return the endpoint URL based on the transaction parameters
   ###
   formatUrl: (params) ->
-    prefix = if config.gateway.testing then 'staging.' else new String
+    prefix = if config.gateway.testing then 'staging.' else ''
 
     if params.token
       util.format '%s://%s%s.%s/%s/%s'
